@@ -9,10 +9,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+/**
+ * Фабрика для генерации тестовых данных.
+ */
 public class TestDataFactory {
 
     private static final Faker faker = new Faker(new Locale("en"));
 
+    /**
+     * Генерирует список случайных людей.
+     *
+     * @param count количество людей
+     * @return список людей
+     */
     public static List<Person> generateFakePeople(int count) {
         List<Person> people = new ArrayList<>();
         for (int i = 0; i < count; i++) {
@@ -27,6 +36,12 @@ public class TestDataFactory {
         return people;
     }
 
+    /**
+     * Генерирует список случайных студентов.
+     *
+     * @param count количество студентов
+     * @return список студентов
+     */
     public static List<Student> generateFakeStudents(int count) {
         List<Student> students = new ArrayList<>();
         for (int i = 0; i < count; i++) {

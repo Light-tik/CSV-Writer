@@ -11,7 +11,18 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-public class CSVWritable implements Writable{
+/**
+ * Класс для записи списка объектов в CSV-файл.
+ */
+public class CSVWritable implements Writable {
+
+    /**
+     * Записывает список объектов в CSV-файл.
+     *
+     * @param data список объектов с аннотированными полями
+     * @param fileName путь к файлу
+     * @throws IllegalArgumentException если список пустой или не содержит полей с аннотацией @CSVField
+     */
     @Override
     public void writeToFile(List<?> data, String fileName) {
 
@@ -54,6 +65,14 @@ public class CSVWritable implements Writable{
             throw new RuntimeException("Unable to write to file " + fileName, e);
         }
     }
+
+    /**
+     * Сериализует значение поля в строку.
+     *
+     * @param value значение поля
+     * @return строковое представление
+     * @throws IllegalArgumentException если значение пустое
+     */
 
     private String serializeFieldValue(Object value){
         if (value == null){

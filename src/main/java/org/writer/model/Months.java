@@ -1,5 +1,9 @@
 package org.writer.model;
 
+
+/**
+ * Перечисление месяцев
+ */
 public enum Months {
     JANUARY,
     FEBRUARY,

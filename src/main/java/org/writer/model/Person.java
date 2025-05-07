@@ -5,6 +5,9 @@ import lombok.Builder;
 import lombok.Data;
 import org.writer.annotation.CSVField;
 
+/**
+ * Модель данных для представления одного человека.
+ */
 @Data
 @Builder
 @AllArgsConstructor
