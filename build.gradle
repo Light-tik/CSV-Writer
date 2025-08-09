@@ -1,0 +1,25 @@
+plugins {
+   id 'java-library'
+}
+
+group = 'org.writer'
+version = '1.0-SNAPSHOT'
+
+java {
+   sourceCompatibility = JavaVersion.VERSION_17
+   targetCompatibility = JavaVersion.VERSION_17
+}
+
+repositories{
+   mavenCentral()
+}
+dependencies {
+   compileOnly 'org.projectlombok:lombok:1.18.34'
+   annotationProcessor 'org.projectlombok:lombok:1.18.34'
+   api 'net.datafaker:datafaker:2.4.3'
+   testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+}
+
+tasks.test{
+   useJUnitPlatform()
+}
