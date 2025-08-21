@@ -14,10 +14,10 @@ repositories{
    mavenCentral()
 }
 dependencies {
-   compileOnly 'org.projectlombok:lombok:1.18.34'
-   annotationProcessor 'org.projectlombok:lombok:1.18.34'
+   compileOnly "org.projectlombok:lombok:${LOMBOK_VERSION}"
+   annotationProcessor "org.projectlombok:lombok:${LOMBOK_VERSION}"
    api 'net.datafaker:datafaker:2.4.3'
-   testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+   testImplementation 'org.junit.jupiter:junit-jupiter:6.0.0-RC1'
 }
 
 tasks.test{
